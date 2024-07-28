@@ -1,0 +1,203 @@
+
+@import './responsive';
+
+* {
+    box-sizing: border-box;
+    unicode-bidi: embed;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    font-size: 1rem;
+    background: #fff;
+    color: #292827;
+    line-height: 1.5;
+}
+
+/* .container {
+    display: initial;
+} */
+
+a {
+    color: #292827;
+    position: relative;
+    padding-bottom: 0.25rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #f5725c;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    &:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    &:hover {
+        color: #292827;
+    }
+}
+
+[data-grid~="container"] {
+    max-width: calc(1920px + 10%);
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.5;
+}
+
+.content {
+    min-height: 65vh;
+    background: #fffafa;
+    border: 1px solid #f3f3f3;
+    border-radius: 16px;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.imgwrp {
+    border-radius: 1.875rem;
+    overflow: hidden;
+}
+
+.pagehead {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.pagesubhead {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+
+.sendMail {
+    font-weight: 500;
+    margin-top: 2rem;
+    line-height: 2.25;
+    
+    i {
+        font-size: 1.5rem;
+        margin-right: 0.75rem;
+
+        &:before {
+            vertical-align: middle;
+        }
+    }
+}
+
+.skills {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.expedu_section {
+    margin-bottom: 4rem;
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+}
+
+
+@include desktop {
+    .typewriter1 {
+        .react-typewriter-text {
+            font-size: 4rem !important;
+        }
+    }
+}
+
+@include laptop {
+    .typewriter1 {
+        .react-typewriter-text {
+            font-size: 3.5rem !important;
+        }
+    }
+
+    .content {
+        min-height: 50vh;
+        padding: 2.5rem 2rem;
+    }
+
+    .homepage {
+        .imgwrp {
+            margin: 0 1rem;
+        }
+    }
+
+    .pagehead {
+        font-size: 3.5rem;
+    }
+}
+
+@include tablet {
+    .typewriter1 {
+        .react-typewriter-text {
+            font-size: 3rem !important;
+        }
+    }
+
+    .pagehead {
+        font-size: 3rem;
+    }
+}
+
+@include mobile {
+    .typewriter1 {
+        .react-typewriter-text {
+            font-size: 2rem !important;
+            margin-bottom: 1rem !important;
+        }
+    }
+    .typewriter2 {
+        .react-typewriter-text {
+            font-size: 1.2rem !important;
+        }
+    }
+
+    .pagehead {
+        font-size: 2rem;
+    }
+}
+
+@include small-mobile {
+    .content {
+        padding: 2rem 0.5rem;
+    }
+
+    .typewriter1 {
+        .react-typewriter-text {
+            font-size: 1.75rem !important;
+        }
+    }
+    .typewriter2 {
+        .react-typewriter-text {
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .homepage {
+        .imgwrp {
+            margin-bottom: 2rem;
+        }
+    }
+}
